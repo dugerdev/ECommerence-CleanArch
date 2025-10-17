@@ -441,9 +441,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
+Your Name - [@dugerdev](https://twitter.com/your_twitter) - muhammedduger@outlook.com
 
-Project Link: [https://github.com/YOUR-USERNAME/ECommerce-CleanArch](https://github.com/YOUR-USERNAME/ECommerce-CleanArch)
+Project Link: [https://github.com/dugerdev/ECommerce-CleanArch](https://github.com/dugerdev/ECommerce-CleanArch)
 
 ## 🙏 Acknowledgments
 
