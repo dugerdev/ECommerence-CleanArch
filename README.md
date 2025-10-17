@@ -441,7 +441,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [@dugerdev](https://twitter.com/your_twitter) - muhammedduger@outlook.com
+Muhammed Duger - [@dugerdev](https://twitter.com/your_twitter) - muhammedduger@outlook.com
 
 Project Link: [https://github.com/dugerdev/ECommerce-CleanArch](https://github.com/dugerdev/ECommerce-CleanArch)
 
