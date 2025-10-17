@@ -8,19 +8,19 @@ A comprehensive e-commerce application built with **Clean Architecture** princip
 
 ## 📋 Table of Contents
 
-- [About The Project](#about-the-project)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Database Schema](#database-schema)
-- [Design Patterns](#design-patterns)
-- [Learning Objectives](#learning-objectives)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [🎯 About The Project](#-about-the-project)
+- [🏗️ Architecture](#️-architecture)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [✨ Features](#-features)
+- [🗄️ Database Schema](#️-database-schema)
+- [🎨 Design Patterns](#-design-patterns)
+- [📚 Learning Objectives](#-learning-objectives)
+- [🗺️ Roadmap](#️-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📧 Contact](#-contact)
 
 ## 🎯 About The Project
 
