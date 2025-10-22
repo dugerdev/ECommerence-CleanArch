@@ -3,7 +3,7 @@ using ECommerence_CleanArch.Application.DTOs.Category;
 
 namespace ECommerence_CleanArch.Application.Validators.Category;
 
-public class CreateCategoryDtoValidator : AbstractValidator<CreateCategoyDto>
+public class CreateCategoryDtoValidator : AbstractValidator<CreateCategoryDto>
 {
     public CreateCategoryDtoValidator()
     {

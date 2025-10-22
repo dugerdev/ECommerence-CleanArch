@@ -135,10 +135,58 @@ The project follows the **Clean Architecture** pattern with four main layers:
    dotnet run --project ECommerence-CleanArch.API
    ```
 
-6. **Access Swagger UI** (when API controllers are implemented)
+6. **Access API Documentation**
    ```
-   https://localhost:5001/swagger
+   OpenAPI JSON: https://localhost:7000/openapi/v1.json
+   Scalar UI: https://localhost:7000/scalar
    ```
+
+### 🚀 API Endpoints
+
+The API provides comprehensive REST endpoints for all entities:
+
+#### Product Endpoints
+- `GET /api/product` - Get all products (with pagination, search, filtering)
+- `GET /api/product/{id}` - Get product by ID
+- `GET /api/product/by-sku/{sku}` - Get product by SKU
+- `GET /api/product/by-category/{categoryId}` - Get products by category
+- `GET /api/product/active` - Get active products
+- `GET /api/product/by-currency/{currency}` - Get products by currency
+- `GET /api/product/low-stock` - Get low stock products
+- `POST /api/product` - Create new product
+- `PUT /api/product/{id}` - Update product
+- `DELETE /api/product/{id}` - Delete product (soft delete)
+
+#### Category Endpoints
+- `GET /api/category` - Get all categories (with pagination, search, filtering)
+- `GET /api/category/{id}` - Get category by ID
+- `GET /api/category/parent` - Get parent categories
+- `GET /api/category/sub/{parentId}` - Get subcategories
+- `GET /api/category/active` - Get active categories
+- `POST /api/category` - Create new category
+- `PUT /api/category/{id}` - Update category
+- `DELETE /api/category/{id}` - Delete category (soft delete)
+
+#### Customer Endpoints
+- `GET /api/customer` - Get all customers (with pagination, search, filtering)
+- `GET /api/customer/{id}` - Get customer by ID
+- `GET /api/customer/by-email/{email}` - Get customer by email
+- `GET /api/customer/active` - Get active customers
+- `GET /api/customer/by-city/{city}` - Get customers by city
+- `POST /api/customer` - Create new customer
+- `PUT /api/customer/{id}` - Update customer
+- `DELETE /api/customer/{id}` - Delete customer (soft delete)
+
+#### Order Endpoints
+- `GET /api/order` - Get all orders (with pagination, filtering by customer, status, date range)
+- `GET /api/order/{id}` - Get order by ID
+- `GET /api/order/by-number/{orderNumber}` - Get order by order number
+- `GET /api/order/by-customer/{customerId}` - Get orders by customer
+- `GET /api/order/by-status/{status}` - Get orders by status
+- `GET /api/order/by-date-range` - Get orders by date range
+- `POST /api/order` - Create new order
+- `PUT /api/order/{id}/status` - Update order status
+- `DELETE /api/order/{id}` - Delete order (soft delete)
 
 ## 📁 Project Structure
 
@@ -204,7 +252,11 @@ ECommerence-CleanArch/
 │   └── DependencyInjection.cs             # Infrastructure DI registration
 │
 └── ECommerence-CleanArch.API/             # Presentation layer
-    ├── Controllers/                       # API controllers (To be implemented)
+    ├── Controllers/                       # API controllers
+    │   ├── ProductController.cs            # Product CRUD operations
+    │   ├── CategoryController.cs          # Category CRUD operations
+    │   ├── CustomerController.cs          # Customer CRUD operations
+    │   └── OrderController.cs              # Order CRUD operations
     ├── Program.cs                         # Application entry point
     └── appsettings.json                   # Configuration
 
@@ -395,12 +447,14 @@ This project was built to learn and demonstrate:
 - [x] AutoMapper integration
 - [x] FluentValidation integration
 
-### Phase 2: API Layer 🚧 (In Progress)
-- [ ] REST API controllers
-- [ ] Swagger/OpenAPI documentation
-- [ ] Error handling middleware
-- [ ] Request/Response logging
-- [ ] API versioning
+### Phase 2: API Layer ✅ (Completed)
+- [x] REST API controllers (Product, Category, Customer, Order)
+- [x] Swagger/OpenAPI documentation
+- [x] Scalar UI integration
+- [x] CRUD operations for all entities
+- [x] Advanced filtering and pagination
+- [x] Search functionality
+- [x] Specialized endpoints (by category, by customer, etc.)
 
 ### Phase 3: Advanced Features 📅 (Planned)
 - [ ] CQRS pattern with MediatR

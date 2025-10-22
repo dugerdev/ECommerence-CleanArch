@@ -6,6 +6,7 @@ using ECommerence_CleanArch.Infrastructure.Persistance.Context;
 using ECommerence_CleanArch.Infrastructure.Persistance.Repositories;
 using ECommerence_CleanArch.Application.Common;
 using ECommerence_CleanArch.Application.Contracts.Repositories;
+using ECommerence_CleanArch.Domain.Entity;
 
 namespace ECommerence_CleanArch.Infrastructure;
 
@@ -36,7 +37,11 @@ public static class DependencyInjection
         // 2. GENERIC REPOSITORY REGISTRATIONS (YENİ)
         // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         
-        services.AddScoped(typeof(IAsyncRepository<>), typeof(EFAsyncRepositoryBase<,>));
+        // Generic repository registration - her entity için ayrı ayrı
+        services.AddScoped<IAsyncRepository<Product>, EFAsyncRepositoryBase<Product, ApplicationDbContext>>();
+        services.AddScoped<IAsyncRepository<Category>, EFAsyncRepositoryBase<Category, ApplicationDbContext>>();
+        services.AddScoped<IAsyncRepository<Customer>, EFAsyncRepositoryBase<Customer, ApplicationDbContext>>();
+        services.AddScoped<IAsyncRepository<Order>, EFAsyncRepositoryBase<Order, ApplicationDbContext>>();
         
         // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         // 3. SPECIFIC REPOSITORY REGISTRATIONS (YENİ)

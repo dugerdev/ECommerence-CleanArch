@@ -1,5 +1,4 @@
 using ECommerence_CleanArch.Infrastructure;
-// Infrastructure DI icin
 using ECommerence_CleanArch.Application;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,8 @@ builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
+// OpenAPI konfigürasyonu
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

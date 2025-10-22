@@ -49,7 +49,7 @@ public class MappingProfile : Profile
                        opt => opt.MapFrom(src => src.SubCategories.Count));
         
         // CreateCategoryDto → Category
-        CreateMap<CreateCategoyDto, Category>()
+        CreateMap<CreateCategoryDto, Category>()
             .ForMember(dest => dest.Id, opt => opt.Ignore())
             .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
             .ForMember(dest => dest.Products, opt => opt.Ignore())
